@@ -1,0 +1,80 @@
+<div class="detail-container">
+
+  <div class="btn-container">
+    <button class="back-button" (click)="backClick()"><<</button>
+  </div>
+
+  <div class="head-container">
+    <h2>{{countyName}}</h2>
+  </div>
+
+  <div>
+    <img class="image" [src]="countryFlag" alt="flag">
+  </div>
+
+  <div class="information">
+    <div class="key">Native Name:</div>
+    <div class="value">{{nameNative}}</div>
+
+    <div class="key">Area:</div>
+    <div class="value">{{countryArea}}</div>
+
+    <div class="key">Population:</div>
+    <div class="value">{{population}}</div>
+
+    <div class="key">Capital:</div>
+    <div class="value">{{countryCapital}}</div>
+
+    <div class="key">Region:</div>
+    <div class="value">{{countryRegion}}</div>
+
+    <div class="key">Sub-Region:</div>
+    <div class="value">{{subRegion}}</div>
+
+    <div>
+      <div class="key">Currency:</div>
+      <div class="value" *ngFor="let money of currency">{{money.code}}, {{money.name}}, {{money.symbol}}</div>
+    </div>
+
+
+    <div>
+      <div class="key">Time Zone:</div>
+      <div class="value">
+        <div class="array" *ngFor="let time of timezones">{{time}}</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="key">Borders:</div>
+      <div class="value">
+        <div class="array borderValue" (click)="navigateBorder(border)"
+             *ngFor="let border of borders">{{border}}</div>
+      </div>
+    </div>
+
+
+    <div class="key">Numeric Code:</div>
+    <div class="value">{{numericCode}}</div>
+
+    <div>
+      <div class="key">Languages:</div>
+      <div class="value">
+        <div class="array" *ngFor="let language of languages">{{language.name}}, {{language.nativeName}}</div>
+      </div>
+    </div>
+
+
+    <div class="key">Domain Name:</div>
+    <div class="value">{{topLevelDomain}}</div>
+
+    <div class="key">Calling Code:</div>
+    <div class="value">{{callingCodes}}</div>
+
+    <div class="key">Alpha2Code:</div>
+    <div class="value">{{alphaCode2}}</div>
+
+    <div style="margin-bottom: 45px" class="key">Alpha3Code:</div>
+    <div style="margin-bottom: 45px" class="value">{{alphaCode3}}</div>
+  </div>
+
+</div>
